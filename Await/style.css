@@ -1,0 +1,191 @@
+/* Style the document body */
+body{
+    background: #212121;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+/* Wrapper section styles for 3d animation */
+.wrapper{
+    width: 300px;
+    height: 300px;
+    margin:0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* hoop section styles for 3d animation */
+.hoop{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background:transparent;
+    box-shadow: 0 0 0 6px #96281b, 0 0 0 26px #d64541;
+    position:absolute;
+    left:100px;
+    top:100px;
+    z-index:5;
+}
+/* Sphere section styles for 3d animation */
+.sphere1,.sphere2{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #22a7f0;
+    position: absolute;
+    left:116px;
+    top: 116px;
+    box-shadow: -7px -7px 0 #1e8bc3 inset;
+    animation:sphere1Move 1.2s linear infinite;
+}
+
+.sphere2{
+    animation: sphere2Move 1.2s linear 0.6s infinite;
+}
+/* Sphere1 section styles for 3d animation */
+@keyframes sphere1Move {
+   0% {
+    width:50px;
+    height: 50px;
+    left:116px;
+    top: 116px;
+    z-index:0;
+   } 
+   10%{
+    width:40px;
+    height: 40px;
+   }
+   20%{
+    width:30px;
+    height:30px;
+   }
+   30%{
+    width:40px;
+    height: 40px;
+   }
+   45%{
+    left:15px;
+   }
+   49%{
+    z-index:0;
+   }
+   50%{
+    width:50px;
+    height: 50px;
+    left:20px;
+    top: 116px;
+    z-index:10;
+   }
+   60%{
+    width:60px;
+    height:60px;
+   }
+   80%{
+    width:70px;
+    height:70px;
+   }
+   90%{
+    width:60px;
+    height:60px;
+   }
+   99%{
+    z-index:10;
+   }
+   100%{
+    width:50px;
+    height: 50px;
+    left:116px;
+    top: 116px;
+    z-index:0;
+   }
+}
+/* Sphere2 section styles for 3d animation */
+@keyframes sphere2Move {
+    0% {
+        width:50px;
+        height: 50px;
+        left:116px;
+        top: 116px;
+        z-index:0;
+       } 
+       10%{
+        width:40px;
+        height: 40px;
+       }
+       20%{
+        width:30px;
+        height:30px;
+       }
+       30%{
+        width:40px;
+        height: 40px;
+       }  
+       45%{
+        left:217px;
+       }
+       49%{
+        z-index:0;
+       }
+       50%{
+        width:50px;
+        height: 50px;
+        left:222px;
+        top: 116px;
+        z-index:10;
+       }
+       60%{
+        width:60px;
+        height:60px;
+       }
+       80%{
+        width:70px;
+        height:70px;
+       }
+       90%{
+        width:60px;
+        height:60px;
+       }
+       99%{
+        z-index: 10;
+       }
+       100%{
+        width:50px;
+        height: 50px;
+        left:116px;
+        top: 116px;
+        z-index:0;
+       }
+    } 
+#heading{
+    color:white;
+}
+/* Button styles */
+.await-btn {
+    background: linear-gradient(to right, white, rgb(201, 27, 21));
+    width:200px;
+    height: 70px;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.await-btn:hover {
+    background: linear-gradient(to right, rgb(201, 27, 21), white);
+    cursor: wait;
+}
+/* Output display div element styling */
+.display{
+    color:white;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left:60px;
+    margin-right:60px;
+    border:2px solid white;
+    margin-top:30px;
+    padding: 20px;
+}
